@@ -4,7 +4,6 @@ function sumarUno(entrada){
     let result = 0;
     let res = "";
     let digitos = 1;
-    //Paso el array a numero
     for (let index = entrada.length-1; index >= 0; index--) {
         const element = entrada[index];
         if (digitos<=16) {
@@ -12,7 +11,6 @@ function sumarUno(entrada){
             multiplicador = multiplicador * 10; 
             digitos++;  
         }else if(digitos == 17){
-            //Le sumo 1
             res = result + "";
             res = element + res ;
             digitos++;  
