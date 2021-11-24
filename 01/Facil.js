@@ -1,12 +1,12 @@
 function sumarUno(entrada){
-    let salida = [];
+    const salida = [];
     let num = "";
     
     for (let index = 0; index < entrada.length; index++) {
         const element = entrada[index];
-        num += element ;  
+        num += element;  
     }
-    let result = (BigInt(num) + 1n).toString();
+    const result = (BigInt(num) + 1n).toString();
 
     for (let index = 0; index < result.length; index++) {
         const element = result[index];
