@@ -1,27 +1,15 @@
 function sumarUno(entrada){
     let salida = [];
-    let multiplicador = 1;
-    let result = 0;
-    let res = "";
-    let digitos = 1;
-    for (let index = entrada.length-1; index >= 0; index--) {
-        const element = entrada[index];
-        if (digitos<=16) {
-            result = digitos == 1 ? result + ((element+1) * multiplicador) : result + (element * multiplicador); 
-            multiplicador = multiplicador * 10; 
-            digitos++;  
-        }else if(digitos == 17){
-            res = result + "";
-            res = element + res ;
-            digitos++;  
-        }else{
-            res = element + res ;
-        }
-        
-    }
+    let num = "";
     
-    for (let index = 0; index < res.length; index++) {
-        const element = res[index];
+    for (let index = 0; index < entrada.length; index++) {
+        const element = entrada[index];
+        num = num + element + "";  
+    }
+    let result = (BigInt(num) + 1n).toString();
+
+    for (let index = 0; index < result.length; index++) {
+        const element = result[index];
         salida.push(element) 
     }
     return salida;
