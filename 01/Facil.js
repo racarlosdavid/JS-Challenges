@@ -4,7 +4,7 @@ function sumarUno(entrada){
     
     for (let index = 0; index < entrada.length; index++) {
         const element = entrada[index];
-        num = num + element + "";  
+        num += element ;  
     }
     let result = (BigInt(num) + 1n).toString();
 
